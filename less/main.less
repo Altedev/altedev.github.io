@@ -242,7 +242,10 @@ header {
 
   .content {
     text-align: center;
-    background-image: url("..\images\header.jpg");
+    background-image: linear-gradient(
+            rgba(0, 0, 0, 0.3),
+            rgba(0, 0, 0, 0.3)
+    ),url("..\images\header.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     padding-top: 165px;
@@ -465,6 +468,12 @@ header {
       .size(5);
       .size-md(12);
       .md(margin-top, 25px);
+      .md(text-align, center);
+
+      img {
+        height: 600px;
+        .xs(height, 476px);
+      }
     }
   }
 }
@@ -695,6 +704,11 @@ header {
         margin-bottom: 20px;
         position: relative;
 
+        &.d-f {
+          display: flex;
+          flex-direction: column;
+        }
+
         &:nth-child(1)::before {
           display: block;
           content: url("..\images\icons\map.png");
@@ -708,7 +722,7 @@ header {
           content: url("..\images\icons\fax.png");
           position: absolute;
           left: 0;
-          top: 0;
+          top: 10px;
         }
 
         &:nth-child(3)::before {
